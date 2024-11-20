@@ -8,5 +8,5 @@ module "dnna" {
 }
 
 output "message" {
-  value = "add aws creds to dns-conf/route53.ini dcoker:lscr.io/linuxserver/swag"
+  value = "add aws creds to dns-conf/route53.ini docker:lscr.io/linuxserver/swag"
 }
