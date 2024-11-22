@@ -10,3 +10,8 @@ module "dnna" {
 output "message" {
   value = "add aws creds to dns-conf/route53.ini docker:lscr.io/linuxserver/swag"
 }
+
+# resource "aws_iam_user" "foouser" {
+#   # (resource arguments)
+#   name = "denny"
+# }
