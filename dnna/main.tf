@@ -23,15 +23,29 @@ resource "aws_iam_group_membership" "dnna_grp_members" {
 data "aws_iam_policy_document" "dnna_verify_ens" {
     statement {
         actions = [ 
-            "route53:GetChange",
-            "route53:ListHostedZones",
-            "route53:ListHostedZonesByName",
+            # "route53:GetChange",
+            # "route53:ListHostedZones",
+            # "route53:ListHostedZonesByName",
             "route53:ChangeResourceRecordSets",
             "route53:ListResourceRecordSets"
         ]
 
         resources = [ 
             "arn:aws:route53:::hostedzone/${var.dns_hostid}"
+        ]
+
+    }
+    statement {
+        actions = [ 
+            "route53:GetChange",
+            "route53:ListHostedZones",
+            "route53:ListHostedZonesByName",
+            # "route53:ChangeResourceRecordSets",
+            # "route53:ListResourceRecordSets"
+        ]
+
+        resources = [ 
+            "*"
         ]
 
     }
